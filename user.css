@@ -1,0 +1,253 @@
+/* General Styles */
+.button-module__button___hf2qg_marketplace {
+  color: var(--spice-subtext);
+}
+
+.main-entityHeader-backgroundColor,
+.main-actionBarBackground-background,
+.main-home-homeHeader,
+.Root__nav-bar,
+.rX_OmqCngvY5ZCoYBZgb,
+.main-yourLibraryX-entryPoints,
+.marketplace-header,
+.EmeHQXR87mUskYK6xEde,
+.lyrics-lyrics-background,
+.playlist-playlist-playlistContent,
+.Root__main-view,
+.HD9s7U5E1RLSWKpXmrqx,
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingWidget-coverArt .cover-art img,
+.main-coverSlotCollapsed-container> :first-child> :first-child,
+.main-nowPlayingWidget-coverArt,
+.ffFwfKcPDbmAPLXzxzKq {
+  background-color: #00000000 !important;
+}
+
+.Root__top-container {
+  background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
+  overflow: hidden;
+  grid-template-areas:
+    "left-sidebar main-view now-playing-bar"
+    "left-sidebar main-view right-sidebar";
+}
+
+.global-nav .Root__top-container {
+  grid-template-areas:
+    "global-nav global-nav global-nav"
+    "left-sidebar main-view now-playing-bar"
+    "left-sidebar main-view right-sidebar" !important;
+  grid-template-rows: auto 1fr 1fr;
+}
+
+.Root__right-sidebar {
+  width: min-content;
+}
+
+.Root__now-playing-bar {
+  width: var(--panel-width);
+}
+
+.main-topBar-background {
+  background-color: var(--spice-highlight) !important;
+}
+
+.main-trackList-trackListRow:hover {
+  background-color: var(--spice-highlight);
+}
+
+.main-playPauseButton-button {
+  background-color: var(--spice-button);
+}
+
+.main-actionBarBackground-background {
+  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #000000 100%), #00000000 !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay,
+.main-entityHeader-background.main-entityHeader-overlay:after {
+  background-image: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.pUNc2aOeOQANHrhYa1GU .RDZ61ETnag1ilfZTkVxe {
+  color: #000000 !important;
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+  min-height: 400px;
+}
+
+.main-nowPlayingBar-container {
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 420px;
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+  flex-direction: column;
+}
+
+[data-right-sidebar-hidden] .Root__main-view {
+  grid-area: main-view/main-view/main-view/span 1;
+}
+
+.main-home-homeHeader {
+  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #00000000 100%), var(--background-noise);
+}
+
+.main-nowPlayingBar-center,
+.main-nowPlayingBar-left,
+.main-nowPlayingBar-right {
+  width: 100%;
+}
+
+/* Remove the now playing widget cover art */
+.main-nowPlayingWidget-coverArt {
+  display: none !important;
+}
+
+.running-animation {
+  animation-play-state: running !important;
+}
+
+.main-coverSlotCollapsed-container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-nowPlayingWidget-nowPlaying {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-coverSlotCollapsed-expandButton {
+  right: 25%;
+}
+
+.player-controls__buttons.player-controls__buttons--new-icons {
+  order: 2;
+}
+
+.playback-bar {
+  order: 1;
+}
+
+.main-nowPlayingBar-extraControls {
+  justify-content: space-evenly;
+}
+
+.main-tag-container {
+  color: var(--spice-sidebar);
+}
+
+.starrynight-bg-container {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+@keyframes twinkle1,
+@keyframes twinkle2,
+@keyframes twinkle3,
+@keyframes twinkle4 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+  20%,
+  40%,
+  60% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pure CSS Shooting Star Animation Effect */
+.shootingstar {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--spice-shooting-star);
+  border-radius: 50%;
+  animation: animate 3s linear infinite;
+  left: initial;
+  z-index: -1;
+}
+
+.shootingstar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--spice-shooting-star), transparent);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+/* Center the now playing widget */
+.main-nowPlayingWidget-nowPlaying {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Remove upgrade button */
+.upgrade-button, 
+button[data-menu-item="upgrade-account"], 
+.main-contextMenu-menuItem a[href="https://www.spotify.com/premium/?ref=desktop_loggedin_upgrade_menu"], 
+button[id="upgradeAccount"],
+.main-topBar-UpgradeButton,
+.Button-y0gtbx-0[aria-label="Upgrade to Premium"] {
+  display: none !important;
+}
+
+/* Ad placeholder */
+.main-leaderboardComponent-container {
+  display: none !important; 
+}
+
+/* Home page ad section */
+.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer, 
+.utUDWsORU96S7boXm2Aq {
+  display: none !important;
+}
+
+/* Remove sponsor ads in playlists */
+.sponsor-container,
+.WiPggcPDzbwGxoxwLWFf {
+  display: none !important;
+}
